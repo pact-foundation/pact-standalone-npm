@@ -1,6 +1,6 @@
 {
   "name": "@pact-foundation/pact-standalone",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Pact mock service and verifier wrapper package. Installing this will install an executable appropriate for your platform.",
   "os": [
     "darwin",
@@ -41,14 +41,14 @@
     "sinon": "^1.15.4"
   },
   "optionalDependencies": {
-    "@pact-foundation/pact-standalone-linux-ia32": "1.0.2",
-    "@pact-foundation/pact-standalone-linux-x64": "1.0.2",
-    "@pact-foundation/pact-standalone-win32": "1.0.2",
-    "@pact-foundation/pact-standalone-darwin": "1.0.2"
+    "@pact-foundation/pact-standalone-linux-ia32": "1.0.3",
+    "@pact-foundation/pact-standalone-linux-x64": "1.0.3",
+    "@pact-foundation/pact-standalone-win32": "1.0.3",
+    "@pact-foundation/pact-standalone-darwin": "1.0.3"
   },
   "main": "./index.js",
   "scripts": {
-    "build": "./scripts/clean.sh && ./scripts/build.sh",
+    "build": "./scripts/clean.sh && ./scripts/build.sh && npm run link",
     "clean": "./scripts/clean.sh",
     "link": "npm link ./dist/pact-standalone-osx/ && npm link ./dist/pact-standalone-win32/ && npm link ./dist/pact-standalone-linux-ia32/ && npm link ./dist/pact-standalone-linux-x64/",
     "unlink": "npm unlink ./dist/pact-standalone-osx/ && npm unlink ./dist/pact-standalone-win32/ && npm unlink ./dist/pact-standalone-linux-ia32/ && npm unlink ./dist/pact-standalone-linux-x64/",
