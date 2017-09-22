@@ -1,16 +1,13 @@
 language: node_js
 node_js:
 - '4'
-# - '5'
-# - '6'
-# - '7'
-# - '8'
 os:
 - linux
-# - osx
 env:
   matrix:
   - CXX=g++-4.8
+  global:
+    secure: HCRu7IBoOVgv/WOmOY/1+wEE5Xyo+C+MhAyvnSKj3oRR1HYyjJ9waIYHAmgjkwpG9m1O18Wb5aQa1o5Nab3SlgB8wWj0lRgyslwM+L8CU3ORMvCCwMlBIeeCjnD8iE8EiKi43kWjc6E4t3EcO3UH5p2fH9UL7n8ZuhbqjmMRu/HtJPJNxZmejwf6yv3V2HvjT3D6/etaVJg0cle0BIB5tm3e42FQKV5Aj1kPFzlQ4mkW0yUUhtdIXzLOn89gw93fxYyg+9BCXW8whQai6B4eCxkaNfQF4BAmIbA4+GnPoF8j+Dy7nQmYu8McqGNCeBJ93ecLH6njZAsf8W7yDfan75WeQJcIEIZvqur97TVAZYxgMYcDsnwRNEWMWb+7+e3GTxceRPWTaYHzZCb3InVkt+Nu0VrCqDtp1EmCOJBEGvMfzziXalpf/eYkmYFiuutE8z76LWK2+tDgPGYItQRykQkvwKqON568pxTRceYGt/fdB2DgfoL7mNI1OSs5XOoWdSyLLpjf60k6eeiIpMl+JcFHqDRAXfjviSbksYRFCCq2gfHeJN59jEsIUIB6RDj+wlPDopELxG1Hu60lA2tGJDQxOoyQiOuoOQ7VeV4Jh0IL65AZJFtBwN8NbO3pkFpCkKOaH7X20JoJ8SFLErVmvQrQy82WCfE8ARbbAekp8dE=
 addons:
   apt:
     sources:
@@ -19,9 +16,6 @@ addons:
     - g++-4.8
 matrix:
   fast_finish: true
-env:
-  global:
-    secure: isP6711kxV+in0NMzAMgSGEJgIVg6K2jXaEIEkjW/1hI5Z8szq1A4Zev62idwEJY4UGEI8xpduupB2XALztIbdXObH/FKOFhBLqLOxCpKWuRd595fN9UiRB7UrXRV+WYdFFUwSSvNstr3ZftmDbc6LQnCCLVZA05kexI4tIVwrM=
 cache:
   apt: true
   directories:
@@ -63,7 +57,7 @@ deploy:
     tags: true
 - provider: script
   skip_cleanup: true
-  script: "npm publish . --access public"
+  script: npm publish . --access public
   on:
     branch: master
     tags: true
