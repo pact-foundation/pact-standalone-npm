@@ -31,6 +31,7 @@ install:
 - npm install --ignore-scripts
 script:
 - npm run build
+- ls -larth ./dist
 after_script:
 - npm test
 before_deploy:
@@ -38,25 +39,25 @@ before_deploy:
 deploy:
 - provider: script
   skip_cleanup: true
-  script: npm publish dist/pact-standalone-darwin --access public
+  script: npm publish dist/pact-standalone-darwin/ --access public
   on:
     branch: master
     tags: true
 - provider: script
   skip_cleanup: true
-  script: npm publish dist/pact-standalone-linux-ia32 --access public
+  script: npm publish dist/pact-standalone-linux-ia32/ --access public
   on:
     branch: master
     tags: true
 - provider: script
   skip_cleanup: true
-  script: npm publish dist/pact-standalone-linux-x64 --access public
+  script: npm publish dist/pact-standalone-linux-x64/ --access public
   on:
     branch: master
     tags: true
 - provider: script
   skip_cleanup: true
-  script: npm publish dist/pact-standalone-win32 --access public
+  script: npm publish dist/pact-standalone-win32/ --access public
   on:
     branch: master
     tags: true
