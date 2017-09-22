@@ -39,13 +39,13 @@ deploy:
     tags: true
 - provider: script
   skip_cleanup: true
-  script: npm publish dist/pact-standalone-linux-ia32/ --access public
+  script: npm publish dist/pact-standalone-linux-x86/ --access public
   on:
     branch: master
     tags: true
 - provider: script
   skip_cleanup: true
-  script: npm publish dist/pact-standalone-linux-x64/ --access public
+  script: npm publish dist/pact-standalone-linux-x86_64/ --access public
   on:
     branch: master
     tags: true
