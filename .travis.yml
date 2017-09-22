@@ -7,7 +7,7 @@ node_js:
 # - '8'
 os:
 - linux
-- osx
+# - osx
 env:
   matrix:
   - CXX=g++-4.8
@@ -23,6 +23,7 @@ env:
   global:
     secure: isP6711kxV+in0NMzAMgSGEJgIVg6K2jXaEIEkjW/1hI5Z8szq1A4Zev62idwEJY4UGEI8xpduupB2XALztIbdXObH/FKOFhBLqLOxCpKWuRd595fN9UiRB7UrXRV+WYdFFUwSSvNstr3ZftmDbc6LQnCCLVZA05kexI4tIVwrM=
 cache:
+  apt: true
   directories:
   - node_modules
   - build
