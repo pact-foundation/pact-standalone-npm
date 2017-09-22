@@ -30,6 +30,7 @@ after_script:
 - npm test
 before_deploy:
 - npm run create_npmrc
+- npm link ./dist/pact-standalone-linux-x86_64/
 deploy:
 - provider: script
   skip_cleanup: true
