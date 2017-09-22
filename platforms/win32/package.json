@@ -1,6 +1,6 @@
 {
   "name": "@pact-foundation/pact-standalone-win32",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Pact standalone service",
   "os": [
     "win32"
