@@ -1,0 +1,36 @@
+{
+  "name": "@pact-foundation/pact-standalone-win32",
+  "version": "1.0.0",
+  "description": "Pact standalone service",
+  "os": [
+    "win32"
+  ],
+  "cpu": [
+    "x64",
+    "ia32"
+  ],
+  "bin": {
+    "pact-mock-service": "./bin/pact-mock-service",
+    "pact-provider-verifier": "./bin/pact-provider-verifier"
+  },
+  "main": "./pact-standalone.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pact-foundation/pact-standalone-npm"
+  },
+  "keywords": [
+    "pact",
+    "standalone",
+    "mock",
+    "verifier"
+  ],
+  "author": "Pact Foundation <pact-foundation@googlegroups.com@bethesque.com> (https://github.com/pact-foundation)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pact-foundation/pact-standalone-npm/issues"
+  },
+  "homepage": "https://github.com/pact-foundation/pact-standalone-npm"
+}

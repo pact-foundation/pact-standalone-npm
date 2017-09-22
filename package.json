@@ -1,0 +1,61 @@
+{
+  "name": "@pact-foundation/pact-standalone",
+  "version": "1.0.0",
+  "description": "Pact mock service and verifier wrapper package. Installing this will install an executable appropriate for your platform.",
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "cpu": [
+    "x64",
+    "ia32"
+  ],
+  "engine": {
+    "node": ">=0.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pact-foundation/pact-standalone-npm"
+  },
+  "keywords": [
+    "pact",
+    "mock",
+    "service",
+    "verifier"
+  ],
+  "author": "Matt Fellows <m@onegeek.com.au> (https://github.com/mefellows)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pact-foundation/pact-standalone-npm/issues"
+  },
+  "homepage": "https://github.com/pact-foundation/pact-standalone-npm",
+  "dependencies": {
+    "bunyan": "^1.8.0",
+    "bunyan-prettystream": "^0.1.3"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "mocha": "^2.2.5",
+    "nodemon": "^1.4.1",
+    "sinon": "^1.15.4"
+  },
+  "optionalDependencies": {
+    "@pact-foundation/pact-standalone-linux-ia32": "1.0.0",
+    "@pact-foundation/pact-standalone-linux-x64": "1.0.0",
+    "@pact-foundation/pact-standalone-win32": "1.0.0",
+    "@pact-foundation/pact-standalone-darwin": "1.0.0"
+  },
+  "main": "./index.js",
+  "scripts": {
+    "build": "./scripts/clean.sh && ./scripts/build.sh",
+    "clean": "./scripts/clean.sh",
+    "link": "npm link ./dist/pact-standalone-osx/ && npm link ./dist/pact-standalone-win32/ && npm link ./dist/pact-standalone-linux-ia32/ && npm link ./dist/pact-standalone-linux-x64/",
+    "unlink": "npm unlink ./dist/pact-standalone-osx/ && npm unlink ./dist/pact-standalone-win32/ && npm unlink ./dist/pact-standalone-linux-ia32/ && npm unlink ./dist/pact-standalone-linux-x64/",
+    "postinstall": "node ./src/check-dependencies.js",
+    "test": "./node_modules/.bin/mocha -R spec ./index.spec.js src/**/*.spec.js",
+    "watch": "./node_modules/.bin/nodemon -e js -x npm test",
+    "prepublish": "npm test",
+    "create_npmrc": "./scripts/create_npmrc_file.sh"
+  }
+}
