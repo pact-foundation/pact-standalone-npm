@@ -1,12 +1,15 @@
 var pkg = require('../package.json');
 var logger = require('./logger.js');
+var os = require('os');
+var osType = os.type();
+var arch = os.arch();
 
+logger.info("Checking platform specific dependency for OS '" + osType + "' and architecture '" + arch + "'...");
 for (var packageName in pkg.optionalDependencies) {
-  if (packageName.indexOf('pact-standalone') !== -1) {
+  if (packageName.indexOf(pkg.name) !== -1) {
     try {
-      logger.info("Platform specific dependency '" + packageName + "' installing");
       require.resolve(packageName);
-      logger.info("Platform specific dependency '" + packageName + "' installed successful");
+      logger.info("Platform specific dependency '" + packageName + "' installed successfully!");
       process.exit(0);
       break;
     } catch (e) {
@@ -15,5 +18,5 @@ for (var packageName in pkg.optionalDependencies) {
   }
 }
 
-logger.error("pact-standalone: Cannot resolve OS specific pact module. Download/install must of failed, please try again.");
+logger.error("Cannot resolve specific pact module for OS " + osType + "' and architecture '" + arch + "'. Download/install must of failed, please try again.");
 process.exit(1);
