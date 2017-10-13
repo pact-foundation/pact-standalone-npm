@@ -1,5 +1,5 @@
 #!/bin/bash -e
 
 rm -rf build
-rm -rf dist
+rm -rf platforms
 rm -rf .npmrc

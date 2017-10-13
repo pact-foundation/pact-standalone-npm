@@ -15,7 +15,7 @@
     "pact-mock-service": "./src/pact-mock-service",
     "pact-provider-verifier": "./src/pact-mock-service"
   },
-  "main": "./index.js",
+  "main": "./src/pact-standalone.js",
   "engine": {
     "node": ">=4"
   },
@@ -51,7 +51,7 @@
     "build": "./scripts/build.sh",
     "clean": "./scripts/clean.sh",
     "postinstall": "node ./src/check-dependencies.js",
-    "test": "./node_modules/.bin/mocha -R spec ./index.spec.js src/**/*.spec.js",
+    "test": "./node_modules/.bin/mocha -R spec src/**/*.spec.js",
     "watch": "./node_modules/.bin/nodemon -e js -x npm test",
     "prepublish": "npm test",
     "create_npmrc": "./scripts/create_npmrc_file.sh",
