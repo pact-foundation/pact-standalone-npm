@@ -1,5 +1,5 @@
 build
-dist
+platforms
 node_modules
 .idea
 npm-debug.log
