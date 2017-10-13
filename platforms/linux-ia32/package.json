@@ -1,10 +1,7 @@
 {
   "name": "@pact-foundation/pact-standalone-linux-ia32",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Pact standalone service",
-  "bin": {
-    "pact-standalone": "./pact-standalone.js"
-  },
   "main": "./pact-standalone.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,7 +18,7 @@
     "mock",
     "verifier"
   ],
-  "author": "Pact Foundation <pact-foundation@googlegroups.com@bethesque.com> (https://github.com/pact-foundation)",
+  "author": "Pact Foundation <pact-foundation@googlegroups.com> (https://github.com/pact-foundation)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/pact-foundation/pact-standalone-npm/issues"
