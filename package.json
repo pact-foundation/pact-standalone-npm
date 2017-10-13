@@ -54,8 +54,6 @@
     "test": "./node_modules/.bin/mocha -R spec src/**/*.spec.js",
     "watch": "./node_modules/.bin/nodemon -e js -x npm test",
     "prepublish": "npm test",
-    "create_npmrc": "./scripts/create_npmrc_file.sh",
-    "link": "npm link --force ./dist/pact-standalone-linux-x64/ && npm link --force ./dist/pact-standalone-linux-ia32/ && npm link --force ./dist/pact-standalone-win32/ && npm --force link ./dist/pact-standalone-darwin/",
-    "unlink": "npm unlink ./dist/pact-standalone-linux-x64/ && npm unlink ./dist/pact-standalone-linux-ia32/ && npm unlink ./dist/pact-standalone-win32/ && npm unlink ./dist/pact-standalone-darwin/"
+    "create_npmrc": "./scripts/create_npmrc_file.sh"
   }
 }
