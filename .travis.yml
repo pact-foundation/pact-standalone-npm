@@ -1,6 +1,5 @@
 language: node_js
-node_js:
-- '4'
+node_js: 6
 os:
 - linux
 env:
@@ -21,32 +20,31 @@ cache:
   directories:
   - node_modules
   - build
+before_install:
+- npm run build
+- npm run link
 install:
 - npm install --ignore-scripts
 script:
-- npm run build
-- ls -larth ./dist
-after_script:
 - npm test
 before_deploy:
 - npm run create_npmrc
-- npm link ./dist/pact-standalone-linux-x86_64/
 deploy:
 - provider: script
   skip_cleanup: true
-  script: npm publish dist/pact-standalone-osx/ --access public
+  script: npm publish dist/pact-standalone-darwin/ --access public
   on:
     branch: master
     tags: true
 - provider: script
   skip_cleanup: true
-  script: npm publish dist/pact-standalone-linux-x86/ --access public
+  script: npm publish dist/pact-standalone-linux-ia32/ --access public
   on:
     branch: master
     tags: true
 - provider: script
   skip_cleanup: true
-  script: npm publish dist/pact-standalone-linux-x86_64/ --access public
+  script: npm publish dist/pact-standalone-linux-x64/ --access public
   on:
     branch: master
     tags: true
@@ -62,5 +60,3 @@ deploy:
   on:
     branch: master
     tags: true
-after_failure:
-- find . -iname '*.log' -print0 | xargs -0 cat
