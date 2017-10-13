@@ -1,14 +1,7 @@
 {
   "name": "@pact-foundation/pact-standalone-win32",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "description": "Pact standalone service",
-  "os": [
-    "win32"
-  ],
-  "cpu": [
-    "x64",
-    "ia32"
-  ],
   "bin": {
     "pact-mock-service": "./bin/pact-mock-service",
     "pact-provider-verifier": "./bin/pact-provider-verifier"

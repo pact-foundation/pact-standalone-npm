@@ -1,10 +1,9 @@
 var pkg = require('../package.json');
 var logger = require('./logger.js');
-var os = require('os');
-var osType = os.type();
-var arch = os.arch();
+var platform = process.platform;
+var arch = process.arch;
 
-logger.info("Checking platform specific dependency for OS '" + osType + "' and architecture '" + arch + "'...");
+logger.info("Checking platform specific dependency for OS '" + platform + "' and architecture '" + arch + "'...");
 for (var packageName in pkg.optionalDependencies) {
   if (packageName.indexOf(pkg.name) !== -1) {
     try {
@@ -18,5 +17,5 @@ for (var packageName in pkg.optionalDependencies) {
   }
 }
 
-logger.error("Cannot resolve specific pact module for OS " + osType + "' and architecture '" + arch + "'. Download/install must of failed, please try again.");
+logger.error("Cannot resolve specific pact module for OS " + platform + "' and architecture '" + arch + "'. Download/install must of failed, please try again.");
 process.exit(1);
