@@ -19,6 +19,11 @@ describe("Pact Standalone", function () {
 		expect(pact.verifierFullPath).to.be.ok;
 	});
 	
+	it("should return the base directory of the project with 'cwd' (where the package.json file is)", function () {
+		expect(fs.existsSync(path.resolve(pact.cwd, 'package.json'))).to.be.true;
+		
+	});
+	
 	describe("Check if OS specific files are there", function () {
 		
 		describe("OSX", function () {
