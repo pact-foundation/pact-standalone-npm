@@ -2,6 +2,7 @@
 var fs = require('fs');
 var path = require('path');
 var expect = require('chai').expect;
+var basePath = path.resolve(__dirname, '..');
 
 describe("Pact Standalone", function () {
 	var pact;
@@ -17,11 +18,12 @@ describe("Pact Standalone", function () {
 		expect(pact.mockServiceFullPath).to.be.ok;
 		expect(pact.verifierPath).to.be.ok;
 		expect(pact.verifierFullPath).to.be.ok;
+		expect(pact.publisherPath).to.be.ok;
+		expect(pact.publisherFullPath).to.be.ok;
 	});
 	
 	it("should return the base directory of the project with 'cwd' (where the package.json file is)", function () {
 		expect(fs.existsSync(path.resolve(pact.cwd, 'package.json'))).to.be.true;
-		
 	});
 	
 	describe("Check if OS specific files are there", function () {
@@ -34,7 +36,7 @@ describe("Pact Standalone", function () {
 			});
 			
 			it("mock service relative path", function () {
-				expect(fs.existsSync(path.resolve(__dirname, '..', pact.mockServicePath))).to.be.true;
+				expect(fs.existsSync(path.resolve(basePath, pact.mockServicePath))).to.be.true;
 			});
 			
 			it("mock service full path", function () {
@@ -42,11 +44,19 @@ describe("Pact Standalone", function () {
 			});
 			
 			it("provider verifier relative path", function () {
-				expect(fs.existsSync(path.resolve(__dirname, '..', pact.verifierPath))).to.be.true;
+				expect(fs.existsSync(path.resolve(basePath, pact.verifierPath))).to.be.true;
 			});
 			
 			it("provider verifier full path", function () {
 				expect(fs.existsSync(pact.verifierFullPath)).to.be.true;
+			});
+			
+			it("publisher relative path", function () {
+				expect(fs.existsSync(path.resolve(basePath, pact.publisherPath))).to.be.true;
+			});
+			
+			it("publisher full path", function () {
+				expect(fs.existsSync(pact.publisherFullPath)).to.be.true;
 			});
 		});
 		
@@ -58,7 +68,7 @@ describe("Pact Standalone", function () {
 			});
 			
 			it("mock service relative path", function () {
-				expect(fs.existsSync(path.resolve(__dirname, '..', pact.mockServicePath))).to.be.true;
+				expect(fs.existsSync(path.resolve(basePath, pact.mockServicePath))).to.be.true;
 			});
 			
 			it("mock service full path", function () {
@@ -66,11 +76,19 @@ describe("Pact Standalone", function () {
 			});
 			
 			it("provider verifier relative path", function () {
-				expect(fs.existsSync(path.resolve(__dirname, '..', pact.verifierPath))).to.be.true;
+				expect(fs.existsSync(path.resolve(basePath, pact.verifierPath))).to.be.true;
 			});
 			
 			it("provider verifier full path", function () {
 				expect(fs.existsSync(pact.verifierFullPath)).to.be.true;
+			});
+
+			it("publisher relative path", function () {
+				expect(fs.existsSync(path.resolve(basePath, pact.publisherPath))).to.be.true;
+			});
+
+			it("publisher full path", function () {
+				expect(fs.existsSync(pact.publisherFullPath)).to.be.true;
 			});
 		});
 		
@@ -82,7 +100,7 @@ describe("Pact Standalone", function () {
 			});
 			
 			it("mock service relative path", function () {
-				expect(fs.existsSync(path.resolve(__dirname, '..', pact.mockServicePath))).to.be.true;
+				expect(fs.existsSync(path.resolve(basePath, pact.mockServicePath))).to.be.true;
 			});
 			
 			it("mock service full path", function () {
@@ -90,11 +108,19 @@ describe("Pact Standalone", function () {
 			});
 			
 			it("provider verifier relative path", function () {
-				expect(fs.existsSync(path.resolve(__dirname, '..', pact.verifierPath))).to.be.true;
+				expect(fs.existsSync(path.resolve(basePath, pact.verifierPath))).to.be.true;
 			});
 			
 			it("provider verifier full path", function () {
 				expect(fs.existsSync(pact.verifierFullPath)).to.be.true;
+			});
+
+			it("publisher relative path", function () {
+				expect(fs.existsSync(path.resolve(basePath, pact.publisherPath))).to.be.true;
+			});
+
+			it("publisher full path", function () {
+				expect(fs.existsSync(pact.publisherFullPath)).to.be.true;
 			});
 		});
 		
@@ -106,7 +132,7 @@ describe("Pact Standalone", function () {
 			});
 			
 			it("mock service relative path", function () {
-				expect(fs.existsSync(path.resolve(__dirname, '..', pact.mockServicePath))).to.be.true;
+				expect(fs.existsSync(path.resolve(basePath, pact.mockServicePath))).to.be.true;
 			});
 			
 			it("mock service full path", function () {
@@ -114,11 +140,19 @@ describe("Pact Standalone", function () {
 			});
 			
 			it("provider verifier relative path", function () {
-				expect(fs.existsSync(path.resolve(__dirname, '..', pact.verifierPath))).to.be.true;
+				expect(fs.existsSync(path.resolve(basePath, pact.verifierPath))).to.be.true;
 			});
 			
 			it("provider verifier full path", function () {
 				expect(fs.existsSync(pact.verifierFullPath)).to.be.true;
+			});
+
+			it("publisher relative path", function () {
+				expect(fs.existsSync(path.resolve(basePath, pact.publisherPath))).to.be.true;
+			});
+
+			it("publisher full path", function () {
+				expect(fs.existsSync(pact.publisherFullPath)).to.be.true;
 			});
 		});
 	});

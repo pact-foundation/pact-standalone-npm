@@ -2,7 +2,7 @@
 
 set -e
 
-export PACT_STANDALONE_VERSION=1.4.2
+export PACT_STANDALONE_VERSION=1.8.0
 export STANDALONE_PACKAGE_NAME=pact-standalone
 
 scripts/build_standalone_packages.sh
