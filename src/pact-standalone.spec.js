@@ -18,8 +18,6 @@ describe("Pact Standalone", function () {
 		expect(pact.brokerFullPath).to.contain("pact-broker");
 		expect(pact.mockServicePath).to.contain("pact-mock-service");
 		expect(pact.mockServiceFullPath).to.contain("pact-mock-service");
-		expect(pact.publisherPath).to.contain("pact-publish");
-		expect(pact.publisherFullPath).to.contain("pact-publish");
 		expect(pact.stubPath).to.contain("pact-stub-service");
 		expect(pact.stubFullPath).to.contain("pact-stub-service");
 		expect(pact.verifierPath).to.contain("pact-provider-verifier");
@@ -57,14 +55,6 @@ describe("Pact Standalone", function () {
 
 			it("mock service full path", function () {
 				expect(fs.existsSync(pact.mockServiceFullPath)).to.be.true;
-			});
-
-			it("publisher relative path", function () {
-				expect(fs.existsSync(path.resolve(basePath, pact.publisherPath))).to.be.true;
-			});
-
-			it("publisher full path", function () {
-				expect(fs.existsSync(pact.publisherFullPath)).to.be.true;
 			});
 
 			it("stub relative path", function () {
@@ -111,14 +101,6 @@ describe("Pact Standalone", function () {
 				expect(fs.existsSync(pact.mockServiceFullPath)).to.be.true;
 			});
 
-			it("publisher relative path", function () {
-				expect(fs.existsSync(path.resolve(basePath, pact.publisherPath))).to.be.true;
-			});
-
-			it("publisher full path", function () {
-				expect(fs.existsSync(pact.publisherFullPath)).to.be.true;
-			});
-
 			it("stub relative path", function () {
 				expect(fs.existsSync(path.resolve(basePath, pact.stubPath))).to.be.true;
 			});
@@ -163,14 +145,6 @@ describe("Pact Standalone", function () {
 				expect(fs.existsSync(pact.mockServiceFullPath)).to.be.true;
 			});
 
-			it("publisher relative path", function () {
-				expect(fs.existsSync(path.resolve(basePath, pact.publisherPath))).to.be.true;
-			});
-
-			it("publisher full path", function () {
-				expect(fs.existsSync(pact.publisherFullPath)).to.be.true;
-			});
-
 			it("stub relative path", function () {
 				expect(fs.existsSync(path.resolve(basePath, pact.stubPath))).to.be.true;
 			});
@@ -204,8 +178,6 @@ describe("Pact Standalone", function () {
 				expect(pact.brokerFullPath).to.contain("pact-broker.bat");
 				expect(pact.mockServicePath).to.contain("pact-mock-service.bat");
 				expect(pact.mockServiceFullPath).to.contain("pact-mock-service.bat");
-				expect(pact.publisherPath).to.contain("pact-publish.bat");
-				expect(pact.publisherFullPath).to.contain("pact-publish.bat");
 				expect(pact.stubPath).to.contain("pact-stub-service.bat");
 				expect(pact.stubFullPath).to.contain("pact-stub-service.bat");
 				expect(pact.verifierPath).to.contain("pact-provider-verifier.bat");
@@ -226,14 +198,6 @@ describe("Pact Standalone", function () {
 
 			it("mock service full path", function () {
 				expect(fs.existsSync(pact.mockServiceFullPath)).to.be.true;
-			});
-
-			it("publisher relative path", function () {
-				expect(fs.existsSync(path.resolve(basePath, pact.publisherPath))).to.be.true;
-			});
-
-			it("publisher full path", function () {
-				expect(fs.existsSync(pact.publisherFullPath)).to.be.true;
 			});
 
 			it("stub relative path", function () {

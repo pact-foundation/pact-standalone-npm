@@ -10,7 +10,6 @@ function binName(name) {
 var cwd = path.resolve(__dirname, '..');
 var mock = binName('pact-mock-service');
 var verify = binName('pact-provider-verifier');
-var publish = binName('pact-publish');
 var broker = binName('pact-broker');
 var stub = binName('pact-stub-service');
 
@@ -20,8 +19,6 @@ module.exports = {
 	brokerFullPath: path.resolve(cwd, basePath, broker).trim(),
 	mockServicePath: path.join(basePath, mock),
 	mockServiceFullPath: path.resolve(cwd, basePath, mock).trim(),
-	publisherPath: path.join(basePath, publish),
-	publisherFullPath: path.resolve(cwd, basePath, publish).trim(),
 	stubPath: path.join(basePath, stub),
 	stubFullPath: path.resolve(cwd, basePath, stub).trim(),
 	verifierPath: path.join(basePath, verify),

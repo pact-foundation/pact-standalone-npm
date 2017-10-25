@@ -22,9 +22,11 @@ do
 
   if [ "${os}" = "win32" ]; then
     unzip -q "pact-${PACT_STANDALONE_VERSION}-${os}.zip" -d "${outputFolder}" && f=("$outputFolder"/*) && mv "$outputFolder"/*/* "$outputFolder" && rmdir "${f[@]}"
+    rm "${outputFolder}/bin/pact-publish.bat"
   else
     mkdir -p "${outputFolder}"
     tar -C "${outputFolder}" --strip-components=1 -xzf "pact-${PACT_STANDALONE_VERSION}-${os}.tar.gz"
+    rm "${outputFolder}/bin/pact-publish"
   fi
 
   echo "--> Copying ${outputFolder} to dist"
