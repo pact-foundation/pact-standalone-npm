@@ -1,6 +1,6 @@
 {
   "name": "@pact-foundation/pact-standalone",
-  "version": "2.4.0",
+  "version": "3.0.0",
   "description": "Pact mock service and verifier wrapper package. Installing this will install an executable appropriate for your platform.",
   "os": [
     "darwin",
@@ -25,7 +25,10 @@
     "service",
     "verifier"
   ],
-  "author": "Matt Fellows <m@onegeek.com.au> (https://github.com/mefellows)",
+  "author": "Michel Boudreau <michelboudreau@gmail.com> (codinghitchhiker.com)",
+  "contributors": [
+    "Matt Fellows <m@onegeek.com.au> (http://www.onegeek.com.au)"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/pact-foundation/pact-standalone-npm/issues"
