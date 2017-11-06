@@ -1,6 +1,6 @@
 {
   "name": "@pact-foundation/pact-standalone",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "Pact mock service and verifier wrapper package. Installing this will install an executable appropriate for your platform.",
   "os": [
     "darwin",
