@@ -42,7 +42,8 @@
     "chai": "^3.2.0",
     "mocha": "^2.2.5",
     "nodemon": "^1.4.1",
-    "sinon": "^1.15.4"
+    "sinon": "^1.15.4",
+    "standard-version": "^4.2.0"
   },
   "optionalDependencies": {
   },
@@ -52,6 +53,8 @@
     "test": "./node_modules/.bin/mocha -R spec src/**/*.spec.js",
     "watch": "./node_modules/.bin/nodemon -e js -x npm test",
     "prepublish": "npm test",
-    "create_npmrc": "./scripts/create_npmrc_file.sh"
+    "create_npmrc": "./scripts/create_npmrc_file.sh",
+    "prerelease": "npm i && npm t && rm package-lock.json",
+    "release": "standard-version"    
   }
 }

@@ -3,13 +3,14 @@
 
 ## Publishing via Travis (recommended)
 
-* Set the PACT_STANDALONE_VERSION in `scripts/build.sh`
-* Update the version number in each `package.json` file to $PACT_STANDALONE_VERSION
-* Commit
+1. Set the PACT_STANDALONE_VERSION in `scripts/build.sh`
+1. Make your changes in a new branch, when merged into master:
 
-    $ git add package.json scripts/build.sh */package.json
-    $ git commit -m "Releasing X.Y.Z"
-    $ git tag -a "X.Y.Z" -m "Releasing X.Y.Z" && git push --follow-tags
+        $ npm run release
+        $ # review workspace and commits - if all looks good...
+        $ git push --follow-tags
+
+Travis CI will do the rest.
 
 ## How to re-tag if a publish fails
 
