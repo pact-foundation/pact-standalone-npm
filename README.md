@@ -17,3 +17,8 @@ On install, this package selects and installs the correct [pact-mock-service] an
 [pact-mock-service]: https://github.com/pact-foundation/pact-mock_service
 [pact-provider-verifier]: https://github.com/pact-foundation/pact-provider-verifier
 [pact-standalone]: https://github.com/pact-foundation/pact-ruby-standalone
+
+## Developing
+
+_NOTE_: If you're on OSX, you'll need [Bash 4](http://clubmate.fi/upgrade-to-bash-4-in-mac-os-x/) 
+installed for the scripts to work.
