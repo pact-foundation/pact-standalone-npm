@@ -1,6 +1,6 @@
 {
   "name": "@pact-foundation/pact-standalone",
-  "version": "3.3.0",
+  "version": "3.4.0",
   "description": "Pact mock service and verifier wrapper package. Installing this will install an executable appropriate for your platform.",
   "os": [
     "darwin",
@@ -45,8 +45,7 @@
     "sinon": "^1.15.4",
     "standard-version": "^4.2.0"
   },
-  "optionalDependencies": {
-  },
+  "optionalDependencies": {},
   "scripts": {
     "build": "./scripts/build.sh",
     "clean": "./scripts/clean.sh",
@@ -55,6 +54,6 @@
     "prepublish": "npm test",
     "create_npmrc": "./scripts/create_npmrc_file.sh",
     "prerelease": "npm i && npm t && rm package-lock.json",
-    "release": "standard-version"    
+    "release": "standard-version"
   }
 }
