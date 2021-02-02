@@ -1,5 +1,9 @@
 <img src="https://github.com/pact-foundation/pact-logo/blob/master/media/logo-black.png" width="200">
 
+⚠️ This repository is now archived ⚠️
+--------------------------------- 
+The functionality implemented here has been provided by https://github.com/pact-foundation/pact-node instead
+
 # Pact Standalone Provider NPM
 
 [![Build Status](https://travis-ci.org/pact-foundation/pact-standalone-npm.svg?branch=master)](https://travis-ci.org/pact-foundation/pact-standalone-npm)
